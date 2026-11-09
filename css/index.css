@@ -1,0 +1,214 @@
+body{
+    /* 引用google字体 */
+    font-family: 'Roboto', sans-serif;
+}
+.main-padding{
+    padding:0 2rem;
+}
+
+nav a{
+    font-size: 2rem!important;
+    font-weight: 500;
+}
+nav a span{
+    color: #06C167;
+}
+
+nav .btn-sign-in{
+    /* border: 1px solid black; */
+    border-radius: 2rem;
+    box-shadow: 1px 1px 4px gray;
+}
+
+.banner{
+    background-image: url(../images/Cute-wallpapers-for-iphone-download.jpg);
+    /* 100%视口高度 */
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* 在父元素中开启BFC，防止父元素因边距重叠，造成高度塌陷 */
+    overflow: hidden;
+}
+
+.banner .banner-items{
+    margin-top: 40vh;
+    width: 100%;
+}
+
+.banner .banner-items h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.banner .banner-items .address{
+    padding-right: 6px;
+}
+
+.banner .banner-items .time{
+    padding-left: 0;
+    padding-right:6px;
+}
+
+.banner .banner-items .form-control{
+    padding:1.5rem;
+    height: 2rem;
+    border:0;
+}
+
+.banner .banner-items input{
+    /* 让出图标位置 */
+    padding-left: 3rem!important;
+}
+.banner .banner-items .address::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f3c5";
+    position: absolute;
+    color: black;
+    font-size: 1.5rem;
+    /* 不设置font-weight根本不显示 */
+    font-weight: 900;
+    left: 2rem;
+    top: 0.3rem;
+}
+#dropdownMenuButton{
+    background-color: white;
+    color: black;
+    height: 3rem;
+    width: 100%;
+    border: 0;
+}
+.banner a.dropdown-item{
+    text-decoration: none!important;
+}
+.banner .time i{
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    color: black;
+}
+.banner .dropdown-menu{
+    width: 120%;
+}
+
+.banner .banner-items .btn-find-food{
+    background-color: black;
+    color: white;
+    height: 3rem;
+    font-size: 1.2rem;
+    /* padding: 1.5rem; */
+
+}
+
+.banner a{
+    text-decoration: underline;
+}
+
+.arrow-button{
+    background-color: lightgrey;
+    border-radius: 50%;
+}
+
+.slide-images img{
+    /* position: absolute; */
+    width: 100%;
+    object-fit: cover;
+    /* top: 0; bottom: 0; right: 0; left: 0; */
+}
+
+.app-download img{
+    width: 88px;
+    margin-right: 2rem;
+}
+.app-download h3{
+    margin-right: 2rem;
+}
+.app-download button{
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 0;
+    padding: 0.2rem 1rem;
+}
+.app-download button i{
+    margin-right: 0.5rem;
+}
+
+.instruction{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.instruction img{
+    margin-bottom: 1rem;
+}
+.instruction a{
+    color: black;
+    text-decoration: underline;
+}
+
+.new-arrival{
+    position: relative;
+}
+.new-arrival h4{
+    font-size: 1.2rem;
+}
+.new-arrival img{
+    width: 100%;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+.new-arrival .icon-new{
+    position: absolute;
+    right: 1rem;
+    bottom: 2rem;
+    background-color: lightgray;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.map a{
+    text-decoration: none;
+    color: black;
+}
+.map a.view-all-link{
+    text-decoration: underline!important;
+    font-weight: 500;
+}
+.map img{
+    width: 100%;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+    /* 在父元素中开启BFC，防止父元素因边距重叠，造成高度塌陷 */
+    overflow: hidden;
+}
+.footer>div{
+    overflow: hidden;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+.footer .quick-link a{
+    margin-bottom:1rem;
+}
+.footer .left-block{
+    position: relative;
+}
+.footer .appstore-icon{
+    position: absolute;
+    bottom: 1rem;
+}
+.footer .appstore-icon img{
+    height: 42px;
+    width: 140px;
+}
+.footer .split-line{
+    border-top: 1px solid white;
+}
+.footer-bottom{
+    margin-bottom: 7rem;
+}

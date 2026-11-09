@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!-- 引用google字体 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/ab7fe88443.js" crossorigin="anonymous"></script>
+    <!-- 引用css文件 -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <!-- fixed-top固定在顶部 -->
+    <!-- 删除navbar-expand，菜单无论屏幕宽度多少，一直处于收缩状态 -->
+    <nav class="navbar navbar-light py-3 fixed-top bg-light main-padding">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-auto ml-3" href="#">
+            Uber
+            <span>Eats</span>
+        </a>
+        <button class="btn btn-sign-in">Sign in</button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- ml-auto让菜单项在非收缩状态下，靠右对齐，mr-auto就是靠左对齐 -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active mx-3">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+        <!-- 如果把登录按钮写在这里，当折叠菜单被打开的时候，该元素会移动到折叠菜单中 -->
+        <!-- <button class="btn">Sign in</button> -->
+    </nav>
+    <div class="banner main-padding">
+        <div class="banner-items">
+            <h1>Hungry? You're in the right place</h1>
+            <form class="row">
+                <div class="form-group address col-6">
+                    <input type="text" class="form-control" placeholder="Enter delivery address">
+                </div>
+                <!-- 下拉菜单 -->
+                <div class="form-group time col-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <!-- <span style="font-family: Font Awesome 5 Free;">&#f017</span> -->
+                        <i class="fas fa-clock"></i>
+                        Deliver now
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-clock"></i>
+                            Deliver now
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-calendar-alt"></i>
+                            Schedule for Later
+                        </a>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-find-food">Find Food</button>
+            </form>
+        </div>
+        <p><a href="#">Sign In</a> for your recent address</p>
+    </div>
+    <div class="slide main-padding my-5">
+        <div class="mb-4 d-flex">
+            <h2>Food near me</h2>
+            <!-- 让元素靠右对齐 -->
+            <div class="ml-auto">
+                <a class="mr-4">View all</a>
+                <button class="btn arrow-button"><i class="fas fa-arrow-left"></i></button>
+                <button class="btn arrow-button"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="row text-center slide-images">
+            <div class="col-2">
+                <img src="./images/01.webp">
+                <p>Thai</p>
+            </div>
+            <div class="col-2">
+                <img src="./images/02.webp">
+                <p>Buger</p>
+            </div>
+            <div class="col-2">
+                <img src="./images/03.webp">
+                <p>Fast Food</p>
+            </div>
+            <div class="col-2">
+                <img src="./images/04.webp">
+                <p>American</p>
+            </div>
+            <div class="col-2">
+                <img src="./images/05.webp">
+                <p>IceCrem and frozen yoghurt</p>
+            </div>
+            <div class="col-2">
+                <img src="./images/06.webp">
+                <p>Korean</p>
+            </div>
+        </div>
+    </div>
+    <div class="app-download">
+        <!-- 设置为弹性容器，并让元素居中，空白在两侧，且子元素垂直中心对齐 -->
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="images/logo.svg">
+            <h3>There's more to love in the app.</h3>
+            <button><i class="fab fa-apple"></i>iPhone</button>
+            <button><i class="fab fa-android"></i>Android</button>
+        </div>
+    </div>
+    <div class="instruction main-padding">
+        <div class="row">
+            <div class="col-4">
+                <img src="images/ins-1.svg">
+                <h3>Feed your employees</h3>
+                <a href="#">Create a business account</a>
+            </div>
+            <div class="col-4">
+                <img src="images/ins-2.svg">
+                <h3>Your restaurant, delivered</h3>
+                <a href="#">Add your restaurant</a>
+            </div>
+            <div class="col-4">
+                <img src="images/ins-3.svg">
+                <h3>Deliver the Eats</h3>
+                <a href="#">Sign up to deliver</a>
+            </div>
+        </div>
+    </div>
+    <div class="new-arrival main-padding">
+        <div class="d-flex">
+            <h2>New on Uber Eats</h2>
+            <!-- 让元素靠右对齐 -->
+            <div class="ml-auto">
+                <button class="btn arrow-button"><i class="fas fa-arrow-left"></i></button>
+                <button class="btn arrow-button"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <img src="./images/food-middle-44 .jpg">
+                <h4>Crust Pizza(Richmond)</h4>
+                <p>$6.99 Fee · 20-30 min</p>
+                <div class="icon-new d-flex align-items-center justify-content-center">
+                    <div>New</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="./images/food-middle-46 .jpg">
+                <h4>Sushi N Poke</h4>
+                <p>$6.99 Fee · 20-30 min</p>
+                <div class="icon-new d-flex align-items-center justify-content-center">
+                    <div>New</div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="./images/food-middle-62 .jpg">
+                <h4>Taka Teriyaki(LIttle Bourke)</h4>
+                <p>$6.99 Fee · 20-30 min</p>
+                <!-- 让文字水平垂直双向居中，里面只能放div，放p不行。 -->
+                <div class="icon-new d-flex align-items-center justify-content-center">
+                    <div>New</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map main-padding mt-5">
+        <!-- 两个子元素按照文字的底边对齐 -->
+        <div class="d-flex mb-3 align-items-baseline">
+            <h2>Cities near me</h2>
+            <a href="#" class="ml-auto view-all-link">View all 500+ cities</a>
+        </div>
+        <img src="./images/map.png" class="mb-3">
+        <div>
+            <div class="row mb-4">
+                <a class="col-3">Adelaide</a>
+                <a class="col-3">Canberra</a>
+                <a class="col-3">Mackay</a>
+                <a class="col-3">Sydney</a>
+            </div>
+            <div class="row mb-4">
+                <a class="col-3">Bendigo and Ballarat</a>
+                <a class="col-3">Darwin</a>
+                <a class="col-3">Melbourne</a>
+                <a class="col-3">Toowoomba</a>
+            </div>
+            <div class="row mb-4">
+                <a class="col-3">Brisbane</a>
+                <a class="col-3">Geelong</a>
+                <a class="col-3">Newcastle</a>
+                <a class="col-3">Townsville</a>
+            </div>
+            <div class="row mb-4">
+                <a class="col-3">Bunbury</a>
+                <a class="col-3">Gold Coast</a>
+                <a class="col-3">Perth</a>
+                <a class="col-3">Wagga Wagga</a>
+            </div>
+            <div class="row mb-4">
+                <a class="col-3">Byron Bay</a>
+                <a class="col-3">Hobart</a>
+                <a class="col-3">Rockhampton</a>
+                <a class="col-3">Wollongong</a>
+            </div>
+            <div class="row mb-4">
+                <a class="col-3">Cairns</a>
+                <a class="col-3">Launceston</a>
+                <a class="col-3">Sunshine Coast</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer mt-5 ">
+        <div class="main-padding mt-5">
+            <div class="row mt-3">
+                <div class="col-6 left-block">
+                    <h1>Uber <span>Eats</span></h1>
+                    <div class="d-flex appstore-icon">
+                        <img src="images/donwload1.svg" class="mr-3">
+                        <img src="images/download2.png">
+                    </div>
+                </div>
+                <div class="col-6 quick-link">
+                    <div class="row">
+                        <a class="col-6">About Uber Eats</a>
+                        <a class="col-6">Get help</a>
+                    </div>
+                    <div class="row">
+                        <a class="col-6">Read our blog</a>
+                        <a class="col-6">Read FAQs</a>
+                    </div>
+                    <div class="row">
+                        <a class="col-6">Buy gift cards</a>
+                        <a class="col-6">View all cities</a>
+                    </div>
+                    <div class="row">
+                        <a class="col-6">Create a business account</a>
+                        <a class="col-6">View all countries</a>
+                    </div>
+                    <div class="row">
+                        <a class="col-6">Add your restaurant</a>
+                        <a class="col-6">Restaurants near me</a>
+                    </div>
+                    <div class="row">
+                        <a class="col-6">Sign up to deliver</a>
+                        <a class="col-6">Save on your first order</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 分割线 -->
+            <div class="split-line mt-4 mb-4"></div>
+            <div class="footer-bottom">
+                <div class="d-flex justify-content-between">
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-square mr-4"></i>
+                        <i class="fab fa-twitter mr-4"></i>
+                        <i class="fab fa-instagram-square"></i>
+                    </div>
+                    <div class="policy">
+                        <a href="#" class="mr-4">Privacy Policy</a>
+                        <a href="#" class="mr-4">Terms</a>
+                        <a href="#">Pricing</a>
+                    </div>
+                </div>
+                <div class="my-3">
+                    <p class="float-right ml-5">© 2021 Uber Technologies Inc.</p>
+                    <p class="float-right">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
